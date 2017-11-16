@@ -1,7 +1,7 @@
 <?php
 
 	$host = "localhost";
-	$user = "root";
+	$user = "juon12";
 	$password = "eta";
 	$dbname = "AppInventori";
 
