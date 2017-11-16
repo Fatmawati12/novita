@@ -22,7 +22,7 @@ if(isset($_POST['kirim'])){
 	}
 
 }
-
+// ini komentar
 ?>
 <!DOCTYPE html>
 <html>
