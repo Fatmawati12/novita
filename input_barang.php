@@ -1,12 +1,25 @@
 <?php
 if(isset($_POST['kirim'])){
-	
+
+	include "koneksi.php";
+
 	$nama = $_POST['nama'];
 	$jumlah = $_POST['jumlah'];
 	$jenis = $_POST['jenis'];
 	$keadaan = $_POST['keadaan'];
 
-	echo $nama.", ".$jumlah.", ".$jenis.", "."$keadaan";
+	//echo $nama.", ".$jumlah.", ".$jenis.", "."$keadaan";
+
+	$sql = " INSERT INTO barang(nama_barang,jumlah_barang,id_jenis,keadaan_barang) VALUES ('$nama','$jumlah','$jenis','$keadaan') ";
+
+	$barang = mysqli_query($koneksi,$sql);
+
+	if($barang){
+		echo "barang berhasil tersimpan<br>";
+	}else{
+		echo "barang gagal disimpan<br>";
+		echo mysqli_error($koneksi);
+	}
 
 }
 
